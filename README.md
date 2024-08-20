@@ -3,7 +3,9 @@
 This project is an interactive Power BI dashboard that shows us insights derived from a dataset on road accidents in the United Kingdom during the years 2021 and 2022. It shows different types of insights about accident data such as YoY growth, location, time of the day, type of road, type of vehicle and type of area. It also shows a breakdown by severity of the accident and casualties. It also contains filters that help you see insights only for a specific weather condition or road surface type Here is a showcase video of the entire dashboard:
 
 
-![[2024-08-19 18-56-58.mp4]]
+
+https://github.com/user-attachments/assets/4e7d756c-f81a-4ceb-8340-833dee5aa8b1
+
 ## Steps in Project
 ---
 ### Requirement Gathering
@@ -32,7 +34,8 @@ Clients wants to create a Road Accident Dashboard for the years 2021 and 2022 so
 ---
 The raw data is contained in an Excel .xlsx file. The data is sourced from official UK Road Accident data for the years 2021 and 2022. There is data such as date and time of the accident, exact location, district, time of the day, type of road, type of vehicle and whether it happened in a rural or an urban area. Here is a sample view of the dataset:
 
-![[1446-02-16 13_15_01-Road Accident Data.xlsx - Excel.png]]
+![1446-02-16 13_15_01-Road Accident Data xlsx - Excel](https://github.com/user-attachments/assets/e8f7ca96-b612-4f9c-9365-bcdd8de19cad)
+
 ### Connecting Data with Power BI
 ---
 To import the data into Power BI, the process is pretty simple:
@@ -72,7 +75,8 @@ Year = YEAR('Calendar'[Date])
 ---
 We have 2 tables in this dataset: Data and Calendar. To establish a relationship between these 2 tables, I have connected the Accident Date column from the Data table to the Date column from the Calendar table in a 1 to many relationship. This means that the dates in the Date column are unique, dates are distinct from each other; however, in the Accident Date column, we may have the same date repeated in more than 1 row. This diagram shows the Data Modelling carried out:
 
-![[1446-02-16 15_54_54-Road Accidents UK Dashboard.png]]
+![1446-02-16 15_54_54-Road Accidents UK Dashboard](https://github.com/user-attachments/assets/540aad49-e2ff-4025-93dc-5ed35365d4a8)
+
 
 ## Dashboard Building
 ---
@@ -139,7 +143,8 @@ YoY Casualties = ([Current Year Casualties] - [Previous Year Casualties])/[Previ
 #### Card Visual Showcase
 ---
 
-![[1446-02-16 16_09_46-Road Accidents UK Dashboard.png]]
+![1446-02-16 16_09_46-Road Accidents UK Dashboard](https://github.com/user-attachments/assets/fb10031e-66a7-427c-8586-d15640dab6ed)
+
 
 ### Casualties by Vehicle Type
 ---
@@ -161,19 +166,22 @@ To consolidate similar vehicle type and reduce clutter in our visual, I've carri
 - Other: Other vehicle; Ridden horse
 - Van: Goods 7.5 tonnes mgw and over; Goods over 3.5t. and under 7.5t.; Van/Goods 3.5 tonnes mgw or under
 
-![[1446-02-16 16_16_15-Road Accidents UK Dashboard.png]]
+![1446-02-16 16_16_15-Road Accidents UK Dashboard](https://github.com/user-attachments/assets/54e7f34d-64a3-462e-9611-76fda10d3030)
+
 
 ### Current Year vs Previous Year Casualties - Monthly Trend
 ---
 Line area chart showcasing the number of casualties per month and comparing the monthly trends differences between the years 2022 and 2021. Formatted using contrasting colors for each year and sorted months in the correct order using the Month Number column from the Calendar table.
 
-![[1446-02-16 16_20_08-Road Accidents UK Dashboard.png]]
+![1446-02-16 16_20_08-Road Accidents UK Dashboard](https://github.com/user-attachments/assets/8dba041f-9467-4f57-8807-6ba6f582113a)
+
 
 ### Urban vs Rural
 ---
 Pie chart showing a comparison of the percentages of casualties occurring in an urban environment vs a rural environment.
 
-![[1446-02-16 17_00_48-Road Accidents UK Dashboard.png]]
+![1446-02-16 17_00_48-Road Accidents UK Dashboard](https://github.com/user-attachments/assets/a612ae6d-dd10-48c2-b7c3-2f8844193538)
+
 
 ### Day vs Night
 ---
@@ -182,22 +190,26 @@ Pie chart showing a comparison of the percentages of casualties occurring during
 - Day: Daylight
 - Night: Darkness - lighting unknown; Darkness - lights lit; Darkness - lights unlit; Darkness - no lighting
 
-![[1446-02-16 17_03_50-Road Accidents UK Dashboard.png]]
+![1446-02-16 17_03_50-Road Accidents UK Dashboard](https://github.com/user-attachments/assets/03bc0c17-7ac1-4ce7-9df2-000eb05286c6)
+
 
 ### Casualties by Road Type
 ---
 Horizontal bar chart showcasing the number of casualties by each type of road.
 
-![[1446-02-16 17_05_06-Road Accidents UK Dashboard.png]]
+![1446-02-16 17_05_06-Road Accidents UK Dashboard](https://github.com/user-attachments/assets/4ddefe6b-5bc1-4882-9112-7904997635a4)
 
 
 ### Casualties by Location (Map)
 ---
 Created a map visual using the Latitude and Longitude columns to showcase the locations of accident casualties on a map of the UK. To show the values of the map correctly, the Latitude and Longitude averages are represented on the map as dots.
 
-![[1446-02-16 17_07_59-Road Accidents UK Dashboard.png]]
+![1446-02-16 17_07_59-Road Accidents UK Dashboard](https://github.com/user-attachments/assets/4fdc2fa0-f675-43b9-af15-1fe801d4760a)
+
+
 ### Filters/Slicers
 ---
 I created 2 filters to change the data displayed in the dashboard, one for Road Surface (Dry, Snow/Ice, Wet) and Weather Conditions (Fine, Other, Rain, Snow/Fog). This means that when we filter by a particular weather condition or type of road surface, only the data corresponding to the value(s) we selected will be shown. Additionally, the visuals interact with each other, so you may also select a specific type of data and the entire dashboard data will filter according to that. For example, if we click on the Urban part of the donut chart, the complete data in the dashboard will change to display only the data related to accidents occurring in an urban environment. This is shown in the showcase video.
 
-![[1446-02-16 17_11_42-Road Accidents UK Dashboard.png]]
+![1446-02-16 17_11_42-Road Accidents UK Dashboard](https://github.com/user-attachments/assets/806a0062-1a09-4f8d-b5bf-f74ac1befe87)
+
